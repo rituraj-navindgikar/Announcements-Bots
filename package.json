@@ -12,5 +12,13 @@
     "fs": "^0.0.1-security"
   },
   "devDependencies": {},
-  "keywords": []
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rituraj-navindgikar/Announcements-Bots.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rituraj-navindgikar/Announcements-Bots/issues"
+  },
+  "homepage": "https://github.com/rituraj-navindgikar/Announcements-Bots#readme"
 }
