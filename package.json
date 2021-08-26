@@ -17,6 +17,10 @@
     "type": "git",
     "url": "git+https://github.com/rituraj-navindgikar/Announcements-Bots.git"
   },
+  "engines": {
+    "node": "16.7.0",
+    "npm": "7.20.3"
+  },
   "bugs": {
     "url": "https://github.com/rituraj-navindgikar/Announcements-Bots/issues"
   },
