@@ -23,7 +23,7 @@ client5.on('ready',()=>{console.log('.')})
 
 for(var i=0; i<clientArray.length; i++)
 {
-    log(i)
+    log(i);
 }
 
 client1.on('message', message => {
