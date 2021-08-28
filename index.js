@@ -80,13 +80,14 @@ client1.on('message', message => {
                 executed1 = false
                 SIGNAL = false
                 console.log("1 work done")
+                return
             }  
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
             client1.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received'));
+                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
                 })
                 console.log("Bot 1 "+member_id + ' sending')
 
@@ -108,13 +109,14 @@ client2.on('message', message => {
                 executed2 = false
                 SIGNAL = false
                 console.log("2 work done")
+                return
             }       
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
             client2.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received'));
+                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
                 })
                 console.log("Bot 2 "+member_id + ' sending')
 
@@ -127,7 +129,7 @@ client3.on('message', message => {
         executed3 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client3.user.username}** ready!`)
-        }, 2000);
+        }, 2100);
         
         let interval = setInterval(() => { 
             if(membersArray.length == 0)
@@ -136,13 +138,14 @@ client3.on('message', message => {
                 executed3 = false
                 SIGNAL = false
                 console.log("3 work done")
+                return
             }        
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
             client3.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received'));
+                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
                 })
                 console.log("Bot 3 "+member_id + ' sending')
 
@@ -164,13 +167,14 @@ client4.on('message', message => {
                 executed4 = false
                 SIGNAL = false
                 console.log("4 work done")
+                return
             }      
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
             client4.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received'));
+                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
                 })
                 console.log("Bot 4 "+member_id + ' sending')
 
@@ -192,13 +196,14 @@ client5.on('message', message => {
                 executed5 = false
                 SIGNAL = false
                 console.log("5 work done")
+                return
             }         
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
             client5.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received'));
+                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
                 })
                 console.log("Bot 5 "+member_id + ' sending')
 
@@ -220,13 +225,14 @@ client6.on('message', message => {
                 executed6 = false
                 SIGNAL = false
                 console.log("6 work done")
+                return
             }         
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
             client6.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received'));
+                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
                 })
                 console.log("Bot 6 "+member_id + ' sending')
 
@@ -248,13 +254,14 @@ client7.on('message', message => {
                 executed7 = false
                 SIGNAL = false
                 console.log("7 work done")
+                return
             }         
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
             client7.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received'));
+                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
                 })
                 console.log("Bot 7 "+member_id + ' sending')
 
@@ -276,13 +283,14 @@ client8.on('message', message => {
                 executed8 = false
                 SIGNAL = false
                 console.log("8 work done")
+                return
             }         
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
             client8.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received'));
+                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
                 })
                 console.log("Bot 8 "+member_id + ' sending')
 
@@ -304,13 +312,14 @@ client9.on('message', message => {
                 executed9 = false
                 SIGNAL = false
                 console.log("9 work done")
+                return
             }         
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
             client9.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received'));
+                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
                 })
                 console.log("Bot 9 "+member_id + ' sending')
 
@@ -332,13 +341,14 @@ client10.on('message', message => {
                 executed10 = false
                 SIGNAL = false
                 console.log("10 work done")
+                return
             }         
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
             client10.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received'));
+                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
                 })
                 console.log("Bot 10 "+member_id + ' sending')
 
@@ -387,5 +397,6 @@ function filterOutNums(member){
 8.  https://discord.com/api/oauth2/authorize?client_id=881264688116170783&permissions=8&scope=bot
 9.  https://discord.com/api/oauth2/authorize?client_id=881264750976200705&permissions=8&scope=bot
 10. https://discord.com/api/oauth2/authorize?client_id=881264853635981362&permissions=8&scope=bot
+
 <a:blacktick:836509943313072168>
 */        
