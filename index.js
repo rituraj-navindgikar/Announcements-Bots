@@ -372,11 +372,15 @@ function filterOutNums(member){
 }
 
 /*
-https://discord.com/api/oauth2/authorize?client_id=879464376850055248&permissions=8&scope=bot
-https://discord.com/api/oauth2/authorize?client_id=879464445921865798&permissions=8&scope=bot
-https://discord.com/api/oauth2/authorize?client_id=879464487474851840&permissions=8&scope=bot
-https://discord.com/api/oauth2/authorize?client_id=879464517640290346&permissions=8&scope=bot
-https://discord.com/api/oauth2/authorize?client_id=879464551714791464&permissions=8&scope=bot
-
+1.  https://discord.com/api/oauth2/authorize?client_id=879464376850055248&permissions=8&scope=bot
+2.  https://discord.com/api/oauth2/authorize?client_id=879464445921865798&permissions=8&scope=bot
+3.  https://discord.com/api/oauth2/authorize?client_id=879464487474851840&permissions=8&scope=bot
+4.  https://discord.com/api/oauth2/authorize?client_id=879464517640290346&permissions=8&scope=bot
+5.  https://discord.com/api/oauth2/authorize?client_id=879464551714791464&permissions=8&scope=bot
+6.  https://discord.com/api/oauth2/authorize?client_id=881264530427101254&permissions=8&scope=bot
+7.  https://discord.com/api/oauth2/authorize?client_id=881264586886639637&permissions=8&scope=bot
+8.  https://discord.com/api/oauth2/authorize?client_id=881264688116170783&permissions=8&scope=bot
+9.  https://discord.com/api/oauth2/authorize?client_id=881264750976200705&permissions=8&scope=bot
+10. https://discord.com/api/oauth2/authorize?client_id=881264853635981362&permissions=8&scope=bot
 <a:blacktick:836509943313072168>
 */        
