@@ -5,21 +5,20 @@ const client2 = new Discord.Client();
 const client3 = new Discord.Client();
 const client4 = new Discord.Client();
 const client5 = new Discord.Client();
+const client6 = new Discord.Client();
+const client7 = new Discord.Client();
+const client8 = new Discord.Client();
+const client9 = new Discord.Client();
+const client10 = new Discord.Client();
 
-const { B1,B2,B3,B4,B5 } = require('./Tokens')
+const { B1,B2,B3,B4,B5,B6,B7,B8,B9,B10 } = require('./Tokens')
 
 const PREFIX = '!'
 
 var membersArray, total_with_role, context, contextresult, role;
 let SIGNAL = false
 
-const clientArray = [client1, client2, client3, client4, client5]
-
-client1.on('ready',()=>{console.log('.')})
-client2.on('ready',()=>{console.log('.')})
-client3.on('ready',()=>{console.log('.')})
-client4.on('ready',()=>{console.log('.')})
-client5.on('ready',()=>{console.log('.')})
+const clientArray = [client1, client2, client3, client4, client5, client6, client7, client8, client9, client10]
 
 for(var i=0; i<clientArray.length; i++)
 {
@@ -59,6 +58,11 @@ let executed2 = false
 let executed3 = false
 let executed4 = false
 let executed5 = false
+let executed6 = false
+let executed7 = false
+let executed8 = false
+let executed9 = false
+let executed10 = false
 
 client1.on('message', message => {
 
@@ -77,7 +81,6 @@ client1.on('message', message => {
                 SIGNAL = false
                 console.log("1 work done")
             }  
-            if(arrayIsEmpty(membersArray)) return console.log('done 1')
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
@@ -106,7 +109,6 @@ client2.on('message', message => {
                 SIGNAL = false
                 console.log("2 work done")
             }       
-            if(arrayIsEmpty(membersArray)) return console.log('done 2')
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
@@ -135,7 +137,6 @@ client3.on('message', message => {
                 SIGNAL = false
                 console.log("3 work done")
             }        
-            if(arrayIsEmpty(membersArray)) return console.log('done 3')
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
@@ -164,7 +165,6 @@ client4.on('message', message => {
                 SIGNAL = false
                 console.log("4 work done")
             }      
-            if(arrayIsEmpty(membersArray)) return console.log('done 4')
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
@@ -193,7 +193,6 @@ client5.on('message', message => {
                 SIGNAL = false
                 console.log("5 work done")
             }         
-            if(arrayIsEmpty(membersArray)) return console.log('done 5')
             let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
             let member_id = filterOutNums(member)
 
@@ -204,6 +203,146 @@ client5.on('message', message => {
                 console.log("Bot 5 "+member_id + ' sending')
 
             }, 39000);
+    }
+})
+client6.on('message', message => {
+
+    if(SIGNAL && !executed6){
+        executed6 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client6.user.username}** ready!`)
+        }, 3500);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed6 = false
+                SIGNAL = false
+                console.log("6 work done")
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client6.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'));
+                })
+                console.log("Bot 6 "+member_id + ' sending')
+
+            }, 41000);
+    }
+})
+client7.on('message', message => {
+
+    if(SIGNAL && !executed7){
+        executed7 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client7.user.username}** ready!`)
+        }, 4000);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed7 = false
+                SIGNAL = false
+                console.log("7 work done")
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client7.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'));
+                })
+                console.log("Bot 7 "+member_id + ' sending')
+
+            }, 43000);
+    }
+})
+client8.on('message', message => {
+
+    if(SIGNAL && !executed8){
+        executed8 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client8.user.username}** ready!`)
+        }, 4500);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed8 = false
+                SIGNAL = false
+                console.log("8 work done")
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client8.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'));
+                })
+                console.log("Bot 8 "+member_id + ' sending')
+
+            }, 45000);
+    }
+})
+client9.on('message', message => {
+
+    if(SIGNAL && !executed9){
+        executed9 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client9.user.username}** ready!`)
+        }, 5000);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed9 = false
+                SIGNAL = false
+                console.log("9 work done")
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client9.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'));
+                })
+                console.log("Bot 9 "+member_id + ' sending')
+
+            }, 47000);
+    }
+})
+client10.on('message', message => {
+
+    if(SIGNAL && !executed10){
+        executed9 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client10.user.username}** ready!`)
+        }, 5500);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed10 = false
+                SIGNAL = false
+                console.log("10 work done")
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client10.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'));
+                })
+                console.log("Bot 10 "+member_id + ' sending')
+
+            }, 49000);
     }
 })
 
