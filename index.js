@@ -351,6 +351,11 @@ client2.login(B2)
 client3.login(B3)
 client4.login(B4)
 client5.login(B5)
+client6.login(B6)
+client7.login(B7)
+client8.login(B8)
+client9.login(B9)
+client10.login(B10)
 
 function log(i) {
     setTimeout(function() {
