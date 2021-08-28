@@ -320,7 +320,7 @@ client9.on('message', message => {
 client10.on('message', message => {
 
     if(SIGNAL && !executed10){
-        executed9 = true
+        executed10 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client10.user.username}** ready!`)
         }, 5500);
