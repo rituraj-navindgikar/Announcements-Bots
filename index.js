@@ -87,7 +87,7 @@ client1.on('message', message => {
 
             client1.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
+                message.channel.send('member <@'+member_id+'> not received'))
                 })
                 console.log("Bot 1 "+member_id + ' sending')
 
@@ -116,7 +116,7 @@ client2.on('message', message => {
 
             client2.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
+                message.channel.send('member <@'+member_id+'> not received'))
                 })
                 console.log("Bot 2 "+member_id + ' sending')
 
@@ -145,7 +145,7 @@ client3.on('message', message => {
 
             client3.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
+                message.channel.send('member <@'+member_id+'> not received'))
                 })
                 console.log("Bot 3 "+member_id + ' sending')
 
@@ -174,7 +174,7 @@ client4.on('message', message => {
 
             client4.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
+                message.channel.send('member <@'+member_id+'> not received'))
                 })
                 console.log("Bot 4 "+member_id + ' sending')
 
@@ -203,7 +203,7 @@ client5.on('message', message => {
 
             client5.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
+                message.channel.send('member <@'+member_id+'> not received'))
                 })
                 console.log("Bot 5 "+member_id + ' sending')
 
@@ -232,7 +232,7 @@ client6.on('message', message => {
 
             client6.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
+                message.channel.send('member <@'+member_id+'> not received'))
                 })
                 console.log("Bot 6 "+member_id + ' sending')
 
@@ -261,7 +261,7 @@ client7.on('message', message => {
 
             client7.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
+                message.channel.send('member <@'+member_id+'> not received'))
                 })
                 console.log("Bot 7 "+member_id + ' sending')
 
@@ -290,7 +290,7 @@ client8.on('message', message => {
 
             client8.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
+                message.channel.send('member <@'+member_id+'> not received'))
                 })
                 console.log("Bot 8 "+member_id + ' sending')
 
@@ -319,7 +319,7 @@ client9.on('message', message => {
 
             client9.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
+                message.channel.send('member <@'+member_id+'> not received'))
                 })
                 console.log("Bot 9 "+member_id + ' sending')
 
@@ -348,7 +348,7 @@ client10.on('message', message => {
 
             client10.users.fetch(member_id, false).then((user) =>{
                 user.send(contextresult).catch(() =>
-                message.channel.send('member <@'+member_id+'> not received')).then(msg => msg.delete({timeout: 50000}));
+                message.channel.send('member <@'+member_id+'> not received'))
                 })
                 console.log("Bot 10 "+member_id + ' sending')
 
