@@ -39,12 +39,11 @@ for(var i=0; i<clientArray.length; i++)
 client1.on('message', message => {
     if(message.author.bot) return   
     if(message.type == 'DM')return
+    if(!message.content.startsWith(`${PREFIX}massdm`))return
     if(SIGNAL == true){
         message.reply('Pehle previous command hone de bhai... pls rukja DAYA kro!!!')
         return
     }
-    if(!message.content.startsWith(`${PREFIX}massdm`))return
-
     if(!message.member.hasPermission('MANAGE_GUILD'))return;
 
     const args = message.content.slice(PREFIX.length).split(/ +/); 
