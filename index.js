@@ -20,16 +20,45 @@ const client17 = new Discord.Client();
 const client18 = new Discord.Client();
 const client19 = new Discord.Client();
 const client20 = new Discord.Client();
+const client21 = new Discord.Client();
+const client22 = new Discord.Client();
+const client23 = new Discord.Client();
+const client24 = new Discord.Client();
+const client25 = new Discord.Client();
+const client26 = new Discord.Client();
+const client27 = new Discord.Client();
+const client28 = new Discord.Client();
+const client29 = new Discord.Client();
+const client30 = new Discord.Client();
+const client31 = new Discord.Client();
+const client32 = new Discord.Client();
+const client33 = new Discord.Client();
+const client34 = new Discord.Client();
+const client35 = new Discord.Client();
+const client36 = new Discord.Client();
+const client37 = new Discord.Client();
+const client38 = new Discord.Client();
+const client39 = new Discord.Client();
+const client40 = new Discord.Client();
 
-const { B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11,B12,B13,B14,B15,B16,B17,B18,B19,B20 } = require('./Tokens')
+
+const { B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12, B13, B14, B15, B16, B17, B18, B19, B20, B21, B22,
+    B23, B24, B25, B26, B27, B28, B29, B30, B31, B32, B33, B34, B35, B36, B37, B38, B39, B40 } = require('./Tokens')
+
+const { t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20, t21, t22,
+    t23, t24, t25, t26, t27, t28, t29, t30, t31, t32, t33, t34, t35, t36, t37, t38, t39, t40 } = require('./Time')
+
+const { log, filterOutNums, arrayIsEmpty } = require('./Functions')        
 
 const PREFIX = '!'
 
 var membersArray, total_with_role, context, contextresult, role;
 let SIGNAL = false
 
-const clientArray = [client1, client2, client3, client4, client5, client6, client7, client8, client9, client10, client11, client12
-    , client13, client14, client15, client16, client17, client18, client19, client20 ]
+const clientArray = [client1, client2, client3, client4, client5, client6, client7, client8, client9, client10, 
+    client11, client12, client13, client14, client15, client16, client17, client18, client19, client20, client21, 
+    client22, client23, client24, client25, client26, client27, client28, client29, client30, client31, client32,
+    client33, client34, client35, client36, client37, client38, client39, client40 ]
 
 for(var i=0; i<clientArray.length; i++)
 {
@@ -44,7 +73,7 @@ client1.on('message', message => {
         message.reply('Pehle previous command hone de bhai... pls rukja DAYA kro!!!')
         return
     }
-    if(!message.member.hasPermission('MANAGE_GUILD'))return;
+    if(!message.member.hasPermission('ADMINISTRATOR'))return;
 
     const args = message.content.slice(PREFIX.length).split(/ +/); 
     context = args.slice(2).join(" ")
@@ -61,7 +90,7 @@ client1.on('message', message => {
 
     membersArray = message.guild.roles.cache.get(role.id).members.array();
     total_with_role = membersArray.length
-    SIGNAL = true  
+    SIGNAL = true
     console.log(`${membersArray.length} have that role`)
     message.channel.send(`${membersArray.length} have that role`)
 })
@@ -86,8 +115,27 @@ let executed17 = false
 let executed18 = false
 let executed19 = false
 let executed20 = false
-// 1      2       3      4      5      6      7      8      9     10     11     12     13     14     15     16     17     18      19      20
-//19000, 23000, 29000, 31000, 37000, 41000, 43000, 47000, 53000, 59000, 61000, 67000, 71000, 73000, 79000, 83000, 89000, 97000, 101000, 103000
+let executed21 = false
+let executed22 = false
+let executed23 = false
+let executed24 = false
+let executed25 = false
+let executed26 = false
+let executed27 = false
+let executed28 = false
+let executed29 = false
+let executed30 = false
+let executed31 = false
+let executed32 = false
+let executed33 = false
+let executed34 = false
+let executed35 = false
+let executed36 = false
+let executed37 = false
+let executed38 = false
+let executed39 = false
+let executed40 = false
+
 client1.on('message', message => {
     if(message.type == 'DM')return
     if(SIGNAL && !executed1){
@@ -115,7 +163,7 @@ client1.on('message', message => {
                 })
                 console.log("Bot 1 "+member_id + ' sending')
 
-            }, 19000);
+            }, t1);
     }
 })
 client2.on('message', message => {
@@ -124,7 +172,7 @@ client2.on('message', message => {
         executed2 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client2.user.username}** ready!`)
-        }, 1500);
+        }, 1250);
         
         let interval = setInterval(() => { 
             if(membersArray.length == 0)
@@ -144,7 +192,7 @@ client2.on('message', message => {
                 })
                 console.log("Bot 2 "+member_id + ' sending')
 
-            }, 23000);
+            }, t2);
     }
 })
 client3.on('message', message => {
@@ -153,7 +201,7 @@ client3.on('message', message => {
         executed3 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client3.user.username}** ready!`)
-        }, 2100);
+        }, 1500);
         
         let interval = setInterval(() => { 
             if(membersArray.length == 0)
@@ -173,7 +221,7 @@ client3.on('message', message => {
                 })
                 console.log("Bot 3 "+member_id + ' sending')
 
-            },29000);
+            },t3);
     }
 })
 client4.on('message', message => {
@@ -182,7 +230,7 @@ client4.on('message', message => {
         executed4 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client4.user.username}** ready!`)
-        }, 2500);
+        }, 1750);
         
         let interval = setInterval(() => {   
             if(membersArray.length == 0)
@@ -202,7 +250,7 @@ client4.on('message', message => {
                 })
                 console.log("Bot 4 "+member_id + ' sending')
 
-            }, 31000);
+            }, t4);
     }
 })
 client5.on('message', message => {
@@ -211,7 +259,7 @@ client5.on('message', message => {
         executed5 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client5.user.username}** ready!`)
-        }, 3000);
+        }, 2000);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -231,7 +279,7 @@ client5.on('message', message => {
                 })
                 console.log("Bot 5 "+member_id + ' sending')
 
-            }, 37000);
+            }, t5);
     }
 })
 client6.on('message', message => {
@@ -240,7 +288,7 @@ client6.on('message', message => {
         executed6 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client6.user.username}** ready!`)
-        }, 3500);
+        }, 2250);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -260,7 +308,7 @@ client6.on('message', message => {
                 })
                 console.log("Bot 6 "+member_id + ' sending')
 
-            }, 41000);
+            }, t6);
     }
 })
 client7.on('message', message => {
@@ -269,7 +317,7 @@ client7.on('message', message => {
         executed7 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client7.user.username}** ready!`)
-        }, 4000);
+        }, 2500);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -289,7 +337,7 @@ client7.on('message', message => {
                 })
                 console.log("Bot 7 "+member_id + ' sending')
 
-            }, 43000);
+            }, t7);
     }
 })
 client8.on('message', message => {
@@ -298,7 +346,7 @@ client8.on('message', message => {
         executed8 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client8.user.username}** ready!`)
-        }, 4500);
+        }, 2750);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -318,7 +366,7 @@ client8.on('message', message => {
                 })
                 console.log("Bot 8 "+member_id + ' sending')
 
-            }, 47000);
+            }, t8);
     }
 })
 client9.on('message', message => {
@@ -327,7 +375,7 @@ client9.on('message', message => {
         executed9 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client9.user.username}** ready!`)
-        }, 5000);
+        }, 3000);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -347,7 +395,7 @@ client9.on('message', message => {
                 })
                 console.log("Bot 9 "+member_id + ' sending')
 
-            }, 53000);
+            }, t9);
     }
 })
 client10.on('message', message => {
@@ -356,7 +404,7 @@ client10.on('message', message => {
         executed10 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client10.user.username}** ready!`)
-        }, 5500);
+        }, 3250);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -376,7 +424,7 @@ client10.on('message', message => {
                 })
                 console.log("Bot 10 "+member_id + ' sending')
 
-            }, 59000);
+            }, t10);
     }
 })
 client11.on('message', message => {
@@ -385,7 +433,7 @@ client11.on('message', message => {
         executed11 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client11.user.username}** ready!`)
-        }, 6000);
+        }, 3500);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -405,7 +453,7 @@ client11.on('message', message => {
                 })
                 console.log("Bot 11 "+member_id + ' sending')
 
-            }, 61000);
+            }, t11);
     }
 })
 client12.on('message', message => {
@@ -414,7 +462,7 @@ client12.on('message', message => {
         executed12 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client12.user.username}** ready!`)
-        }, 6500);
+        }, 3750);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -434,7 +482,7 @@ client12.on('message', message => {
                 })
                 console.log("Bot 12 "+member_id + ' sending')
 
-            }, 67000);
+            }, t12);
     }
 })
 client13.on('message', message => {
@@ -443,7 +491,7 @@ client13.on('message', message => {
         executed13 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client13.user.username}** ready!`)
-        }, 7000);
+        }, 4000);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -463,7 +511,7 @@ client13.on('message', message => {
                 })
                 console.log("Bot 13 "+member_id + ' sending')
 
-            }, 71000);
+            }, t13);
     }
 })
 client14.on('message', message => {
@@ -472,7 +520,7 @@ client14.on('message', message => {
         executed14 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client14.user.username}** ready!`)
-        }, 7500);
+        }, 4250);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -492,7 +540,7 @@ client14.on('message', message => {
                 })
                 console.log("Bot 14 "+member_id + ' sending')
 
-            }, 73000);
+            }, t14);
     }
 })
 client15.on('message', message => {
@@ -501,7 +549,7 @@ client15.on('message', message => {
         executed15 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client15.user.username}** ready!`)
-        }, 8000);
+        }, 4500);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -521,7 +569,7 @@ client15.on('message', message => {
                 })
                 console.log("Bot 15 "+member_id + ' sending')
 
-            }, 79000);
+            }, t15);
     }
 })
 client16.on('message', message => {
@@ -530,7 +578,7 @@ client16.on('message', message => {
         executed16 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client16.user.username}** ready!`)
-        }, 8500);
+        }, 4750);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -550,7 +598,7 @@ client16.on('message', message => {
                 })
                 console.log("Bot 16 "+member_id + ' sending')
 
-            }, 83000);
+            }, t16);
     }
 })
 client17.on('message', message => {
@@ -559,7 +607,7 @@ client17.on('message', message => {
         executed17 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client17.user.username}** ready!`)
-        }, 9000);
+        }, 5000);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -579,7 +627,7 @@ client17.on('message', message => {
                 })
                 console.log("Bot 17 "+member_id + ' sending')
 
-            }, 89000);
+            }, t17);
     }
 })
 client18.on('message', message => {
@@ -588,7 +636,7 @@ client18.on('message', message => {
         executed18 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client18.user.username}** ready!`)
-        }, 9500);
+        }, 5250);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -608,7 +656,7 @@ client18.on('message', message => {
                 })
                 console.log("Bot 18 "+member_id + ' sending')
 
-            }, 97000);
+            }, t18);
     }
 })
 client19.on('message', message => {
@@ -617,7 +665,7 @@ client19.on('message', message => {
         executed19 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client19.user.username}** ready!`)
-        }, 10000);
+        }, 5500);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -637,7 +685,7 @@ client19.on('message', message => {
                 })
                 console.log("Bot 19 "+member_id + ' sending')
 
-            }, 101000);
+            }, t19);
     }
 })
 client20.on('message', message => {
@@ -646,7 +694,7 @@ client20.on('message', message => {
         executed20 = true
         setTimeout(() => {
             message.channel.send(`<a:blacktick:836509943313072168> **${client20.user.username}** ready!`)
-        }, 11000);
+        }, 5750);
         
         let interval = setInterval(() => {  
             if(membersArray.length == 0)
@@ -666,10 +714,589 @@ client20.on('message', message => {
                 })
                 console.log("Bot 20 "+member_id + ' sending')
 
-            }, 103000);
+            }, t20);
     }
 })
+client21.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed21){
+        executed21 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client21.user.username}** ready!`)
+        }, 6000);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed21 = false
+                SIGNAL = false
+                console.log("21 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
 
+            client21.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 21 "+member_id + ' sending')
+
+            }, t21);
+    }
+})
+client22.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed22){
+        executed22 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client22.user.username}** ready!`)
+        }, 6250);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed22 = false
+                SIGNAL = false
+                console.log("21 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client22.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 22 "+member_id + ' sending')
+
+            }, t22);
+    }
+})
+client23.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed23){
+        executed23 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client23.user.username}** ready!`)
+        }, 6500);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed23 = false
+                SIGNAL = false
+                console.log("23 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client23.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 23 "+member_id + ' sending')
+
+            }, t23);
+    }
+})
+client24.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed24){
+        executed24 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client24.user.username}** ready!`)
+        }, 6750);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed24 = false
+                SIGNAL = false
+                console.log("24 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client24.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 24 "+member_id + ' sending')
+
+            }, t24);
+    }
+})
+client25.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed25){
+        executed25 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client25.user.username}** ready!`)
+        }, 7000);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed25 = false
+                SIGNAL = false
+                console.log("25 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client25.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 25 "+member_id + ' sending')
+
+            }, t25);
+    }
+})
+client26.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed26){
+        executed26 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client26.user.username}** ready!`)
+        }, 7250);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed26 = false
+                SIGNAL = false
+                console.log("26 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client26.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 26 "+member_id + ' sending')
+
+            }, t26);
+    }
+})
+client27.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed27){
+        executed27 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client27.user.username}** ready!`)
+        }, 7500);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed27 = false
+                SIGNAL = false
+                console.log("27 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client27.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 27 "+member_id + ' sending')
+
+            }, t27);
+    }
+})
+client28.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed28){
+        executed28 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client28.user.username}** ready!`)
+        }, 7750);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed28 = false
+                SIGNAL = false
+                console.log("28 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client28.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 28 "+member_id + ' sending')
+
+            }, t28);
+    }
+})
+client29.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed29){
+        executed29 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client29.user.username}** ready!`)
+        }, 8000);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed29 = false
+                SIGNAL = false
+                console.log("29 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client29.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 29 "+member_id + ' sending')
+
+            }, t29);
+    }
+})
+client30.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed30){
+        executed30 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client30.user.username}** ready!`)
+        }, 8250);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed30 = false
+                SIGNAL = false
+                console.log("30 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client30.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 30 "+member_id + ' sending')
+
+            }, t30);
+    }
+})
+client31.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed31){
+        executed31 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client31.user.username}** ready!`)
+        }, 8500);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed31 = false
+                SIGNAL = false
+                console.log("31 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client31.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 31 "+member_id + ' sending')
+
+            }, t31);
+    }
+})
+client32.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed32){
+        executed32 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client32.user.username}** ready!`)
+        }, 8500);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed32 = false
+                SIGNAL = false
+                console.log("32 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client32.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 32 "+member_id + ' sending')
+
+            }, t32);
+    }
+})
+client33.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed33){
+        executed33 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client33.user.username}** ready!`)
+        }, 8750);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed33 = false
+                SIGNAL = false
+                console.log("33 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client33.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 33 "+member_id + ' sending')
+
+            }, t33);
+    }
+})
+client34.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed34){
+        executed34 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client34.user.username}** ready!`)
+        }, 9000);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed34 = false
+                SIGNAL = false
+                console.log("34 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client34.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 34 "+member_id + ' sending')
+
+            }, t34);
+    }
+})
+client35.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed35){
+        executed35 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client35.user.username}** ready!`)
+        }, 9250);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed35 = false
+                SIGNAL = false
+                console.log("35 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client35.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 35 "+member_id + ' sending')
+
+            }, t35);
+    }
+})
+client36.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed36){
+        executed36 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client36.user.username}** ready!`)
+        }, 9500);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed36 = false
+                SIGNAL = false
+                console.log("36 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client36.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 36 "+member_id + ' sending')
+
+            }, t36);
+    }
+})
+client37.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed37){
+        executed37 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client37.user.username}** ready!`)
+        }, 9750);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed37 = false
+                SIGNAL = false
+                console.log("37 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client37.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 37 "+member_id + ' sending')
+
+            }, t37);
+    }
+})
+client38.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed38){
+        executed38 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client38.user.username}** ready!`)
+        }, 10000);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed38 = false
+                SIGNAL = false
+                console.log("38 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client38.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 38 "+member_id + ' sending')
+
+            }, t38);
+    }
+})
+client39.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed39){
+        executed39 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client39.user.username}** ready!`)
+        }, 10250);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed39 = false
+                SIGNAL = false
+                console.log("39 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client39.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 39 "+member_id + ' sending')
+
+            }, t39);
+    }
+})
+client40.on('message', message => {
+    if(message.type == 'DM')return
+    if(SIGNAL && !executed40){
+        executed40 = true
+        setTimeout(() => {
+            message.channel.send(`<a:blacktick:836509943313072168> **${client40.user.username}** ready!`)
+        }, 10500);
+        
+        let interval = setInterval(() => {  
+            if(membersArray.length == 0)
+            {
+                clearInterval(interval)
+                executed40 = false
+                SIGNAL = false
+                console.log("40 work done")
+                return
+            }         
+            let member = membersArray.splice(Math.floor(Math.random() * membersArray.length), 1).toString();
+            let member_id = filterOutNums(member)
+
+            client40.users.fetch(member_id, false).then((user) =>{
+                user.send(contextresult).catch(() =>
+                message.channel.send('member <@'+member_id+'> not received'))
+                })
+                console.log("Bot 40 "+member_id + ' sending')
+
+            }, t40);
+    }
+})
 
 client1.login(B1)
 client2.login(B2)
@@ -691,47 +1318,27 @@ client17.login(B17)
 client18.login(B18)
 client19.login(B19)
 client20.login(B20)
-
-function log(i) {
-    setTimeout(function() {
-        console.log(`MTBxAnnouncement${i+1} is Online!`)
-    }, 500 * i);
-}
-
-function arrayIsEmpty(array) {
-    if(array.length == 0){return true}
-    else return false; 
-}
-
-function filterOutNums(member){
-    let member_id4 = member.replace('<' , '');
-    let member_id3 = member_id4.replace('@' , '');
-    let member_id2 = member_id3.replace('!' , '');
-    let member_id = member_id2.replace('>', '');
-    return member_id;
-}
-
+client21.login(B21)
+client22.login(B22)
+client23.login(B23)
+client24.login(B24)
+client25.login(B25)
+client26.login(B26)
+client27.login(B27)
+client28.login(B28)
+client29.login(B29)
+client30.login(B30)
+client31.login(B31)
+client32.login(B32)
+client33.login(B33)
+client34.login(B34)
+client35.login(B35)
+client36.login(B36)
+client37.login(B37)
+client38.login(B38)
+client39.login(B39)
+client40.login(B40)
 /*
-1.  https://discord.com/api/oauth2/authorize?client_id=879464376850055248&permissions=8&scope=bot
-2.  https://discord.com/api/oauth2/authorize?client_id=879464445921865798&permissions=8&scope=bot
-3.  https://discord.com/api/oauth2/authorize?client_id=879464487474851840&permissions=8&scope=bot
-4.  https://discord.com/api/oauth2/authorize?client_id=879464517640290346&permissions=8&scope=bot
-5.  https://discord.com/api/oauth2/authorize?client_id=879464551714791464&permissions=8&scope=bot
-6.  https://discord.com/api/oauth2/authorize?client_id=881264530427101254&permissions=8&scope=bot
-7.  https://discord.com/api/oauth2/authorize?client_id=881264586886639637&permissions=8&scope=bot
-8.  https://discord.com/api/oauth2/authorize?client_id=881264688116170783&permissions=8&scope=bot
-9.  https://discord.com/api/oauth2/authorize?client_id=881264750976200705&permissions=8&scope=bot
-10. https://discord.com/api/oauth2/authorize?client_id=881264853635981362&permissions=8&scope=bot
-11. https://discord.com/api/oauth2/authorize?client_id=881959579846606949&permissions=8&scope=bot
-12. https://discord.com/api/oauth2/authorize?client_id=881960683623817228&permissions=8&scope=bot
-13. https://discord.com/api/oauth2/authorize?client_id=881960720584036352&permissions=8&scope=bot
-14. https://discord.com/api/oauth2/authorize?client_id=881960778004058173&permissions=8&scope=bot
-15. https://discord.com/api/oauth2/authorize?client_id=881960815610187857&permissions=8&scope=bot
-16. https://discord.com/api/oauth2/authorize?client_id=881960847788896297&permissions=8&scope=bot
-17. https://discord.com/api/oauth2/authorize?client_id=881960900725194783&permissions=8&scope=bot
-18. https://discord.com/api/oauth2/authorize?client_id=881961008472686593&permissions=8&scope=bot
-19. https://discord.com/api/oauth2/authorize?client_id=881961042526220328&permissions=8&scope=bot
-20. https://discord.com/api/oauth2/authorize?client_id=881961077712248922&permissions=8&scope=bot
-
 <a:blacktick:836509943313072168>
+https://cdn.discordapp.com/app-icons/881264750976200705/5e359aa5ccc9d472e5a7741e531cd7c6.png?size=256
 */        
