@@ -73,7 +73,7 @@ client1.on('message', message => {
         message.reply('Pehle previous command hone de bhai... pls rukja DAYA kro!!!')
         return
     }
-    if(!message.member.hasPermission('ADMINISTRATOR'))return;
+    if(!message.member.hasPermission('MANAGE_GUILD'))return;
 
     const args = message.content.slice(PREFIX.length).split(/ +/); 
     context = args.slice(2).join(" ")
