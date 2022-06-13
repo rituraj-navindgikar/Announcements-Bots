@@ -1,7 +1,6 @@
 {
   "name": "announcements-bots",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "alexa-bot-api": "^0.1.9",
@@ -57,5 +56,7 @@
   "bugs": {
     "url": "https://github.com/rituraj-navindgikar/Announcements-Bots/issues"
   },
-  "homepage": "https://github.com/rituraj-navindgikar/Announcements-Bots#readme"
+  "homepage": "https://github.com/rituraj-navindgikar/Announcements-Bots#readme",
+  "keywords": [],
+  "description": ""
 }
