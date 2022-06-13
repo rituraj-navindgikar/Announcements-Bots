@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node --max_old_space_size=2560 index.js",
+    "build": "node --max_old_space_size=2560 index.js",
+    "test": "react-scripts test"
   },
   "repository": {
     "type": "git",
