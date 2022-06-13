@@ -4,10 +4,7 @@ function log(i) {
     }, 250 * i);
 }
 
-function arrayIsEmpty(array) {
-    if(array.length == 0){return true}
-    else return false; 
-}
+
 
 function filterOutNums(member){
     let member_id4 = member.replace('<' , '');
@@ -16,4 +13,4 @@ function filterOutNums(member){
     let member_id = member_id2.replace('>', '');
     return member_id;
 }
-module.exports = { log, arrayIsEmpty, filterOutNums}
+module.exports = { log, filterOutNums};
